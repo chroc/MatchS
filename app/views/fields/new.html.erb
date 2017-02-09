@@ -1,0 +1,24 @@
+<h3>Create a Field</h3>
+<form class="col s12 m6 l6" action="/fields" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div class="row">
+    <div class="input-field col s12 m6 l6">
+      <input id="name" type="text" class="validate" name="name" required>
+      <label for="first_name">Field Name</label>
+    </div>
+    <div class="input-field col s12 m6 l6">
+      <input id="address" type="text" class="validate" name="address" required>
+      <label for="first_name">Address</label>
+    </div>
+  </div>
+  <div class="row">
+    <textarea id="additional_info" name="additional_info" class="materialize-textarea" placeholder="Additional info"></textarea>
+  </div>
+  <div class="row">
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </div>
+</form>
+
+<%= link_to 'Back', fields_path %>

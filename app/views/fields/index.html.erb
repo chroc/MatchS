@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<h3>Stadiums</h3>
+
+<div class="row">
+  <% @fields.each do |field| %>
+  <div class="col s12 m6 l6">
+    <div class="card">
+      <div class="card-image">
+        <img height="270" width="350" src="<%= field.img %>">
+        <span class="card-title"><%= field.name %></span>
+      </div>
+      <div class="card-content">
+        <p><%= field.additional_info %></p>
+      </div>
+      <div class="card-action">
+        <a href="/fields/<%= field.id %>/edit">Edit</a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Field', new_field_path %>

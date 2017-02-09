@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba3</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+     <!-- This line is needed in order to load the icons -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="teal lighten-2" role="navigation">
+      <div class="nav-wrapper"> <a href="/" class="brand-logo center">MatechS</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/login">Log In</a></li>
+          <li><a href="/players/new">Create an Account</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="/login">Log In</a></li>
+          <li><a href="/players/new">Create an Account</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="page-footer teal lighten-2">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text"></h5>
+            <p class="grey-text text-lighten-4"></p>
+          </div>
+          <div class="col l6 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+              <li><a class="white-text btn purple darken-2" href="#!">Submit</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright teal lighten-2">
+        <div class="container"></div>
+      </div>
+    </footer>
+  </body>
+</html>
