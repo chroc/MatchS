@@ -1,3 +1,17 @@
 <div class="row">
   <h3>Upcoming matches</h3>
+
+  <div class="row">
+    <div class="carousel">
+      <% @matches.each do |match| %>
+        <% field = Field.find_by(id: match.field_id) %>
+        <a class="carousel-item" href="/matches/<%= match.id %>"><img src="<%= field.img %>"><%= match.name %></a>
+      <% end %>
+    </div>
+  </div>
+  <a class="btn" href="/players/<%= session[:current_user_id] %>">My profile</a>
+  <a class="btn" href="/teams/new">Create a Team</a>
+  <a class="btn" href="/matches/new">Create a Match</a>
+  <a class="btn" href="/fields">Stadiums</a>
+
 </div>

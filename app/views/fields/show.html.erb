@@ -1,24 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @field.name %>
-</p>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+  <div class="card-panel grey lighten-5 z-depth-1">
+    <div class="row valign-wrapper">
+      <div class="col s2 m6 l6">
+        <img src="<%= @field.img %>" alt="" class="circle responsive-img">
+      </div>
+      <div class="col s10 m6 l6">
+        <span class="black-text">
+          <p>
+            <strong>Name:</strong>
+            <%= @field.name %>
+          </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @field.address %>
-</p>
+          <p>
+            <strong>Address:</strong>
+            <%= @field.address %>
+          </p>
 
-<p>
-  <strong>Additional info:</strong>
-  <%= @field.additional_info %>
-</p>
+          <p>
+            <strong>Additional info:</strong>
+            <%= @field.additional_info %>
+          </p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @field.rating %>
-</p>
+          <p>
+            <strong>Rating:</strong>
+            <%= @field.rating %>
+          </p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <%= link_to 'Edit', edit_field_path(@field) %> |
 <%= link_to 'Back', fields_path %>

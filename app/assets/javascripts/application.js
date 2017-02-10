@@ -18,13 +18,25 @@
 //= require components
 //= require_tree .
 $( document ).ready(function() {
+
     $(".button-collapse").sideNav();
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $(".modal").modal();
+
+    $('.carousel').carousel();
+
+    $(".modal").modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 370, // Transition in duration
+      outDuration: 370, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+    });
+
     $(".datepicker").pickadate({
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 120 // Creates a dropdown of 15 years to control year
     });
+
     var i = 3;
     $(".btn-floating").on("click", function(){
       $(".player-inputs").append(
@@ -35,4 +47,3 @@ $( document ).ready(function() {
       i ++;
     });
 });
-"''"

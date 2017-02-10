@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root to: "landing_page#index"
   get "/home", to: "landing_page#home"
-  get "/login", to: "landing_page#login" 
+  get "/login", to: "landing_page#login"
+  post "/session/create", to: "sessions#create"
+  post "/session/destroy", to: "sessions#destroy"
   resources :comments
   resources :matches
   resources :fields

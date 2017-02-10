@@ -2,39 +2,26 @@
 
 <h1>Players</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
-      <th>Birthdate</th>
-      <th>Genre</th>
-      <th>Position 1</th>
-      <th>Position 2</th>
-      <th>Additional info</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @players.each do |player| %>
-      <tr>
-        <td><%= player.first_name %></td>
-        <td><%= player.last_name %></td>
-        <td><%= player.email %></td>
-        <td><%= player.birthdate %></td>
-        <td><%= player.genre %></td>
-        <td><%= player.position_1 %></td>
-        <td><%= player.position_2 %></td>
-        <td><%= player.additional_info %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <% @players.each do |player| %>
+  <div class="col s12 m8 l8">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img height="220" width="150" src="<%= player.img %>">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h4><%= "#{player.first_name} #{player.last_name}" %></h4>
+          <p><b>Position: </b><%= player.position_1 %></p>
+        </div>
+        <div class="card-action">
+          <a href="/players/<%= player.id %>">View player</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <br>
 

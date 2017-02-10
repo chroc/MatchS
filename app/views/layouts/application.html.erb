@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Prueba3</title>
+    <title>MatchS</title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <!-- Compiled and minified CSS -->
@@ -11,18 +11,19 @@
      <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
   </head>
 
   <body>
     <nav class="teal lighten-2" role="navigation">
-      <div class="nav-wrapper"> <a href="/" class="brand-logo center">MatechS</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="nav-wrapper"> <a href="/home" class="brand-logo center">MatechS</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/login">Log In</a></li>
+          <li><a href="#modal1">Log In</a></li>
           <li><a href="/players/new">Create an Account</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="/login">Log In</a></li>
+          <li><a href="#modal1">Log In</a></li>
           <li><a href="/players/new">Create an Account</a></li>
         </ul>
       </div>
@@ -34,14 +35,12 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text"></h5>
-            <p class="grey-text text-lighten-4"></p>
+            <h5 class="white-text">Challenge your friends</h5>
+            <p class="grey-text text-lighten-4">Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass</p>
           </div>
           <div class="col l6 s12">
             <h5 class="white-text">Connect</h5>
-            <ul>
-              <li><a class="white-text btn purple darken-2" href="#!">Submit</a></li>
-            </ul>
+            <a class="white-text btn light-blue lighten-2" href="#!"><i class="material-icons">code</i></a>
           </div>
         </div>
       </div>
