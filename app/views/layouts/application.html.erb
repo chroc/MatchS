@@ -19,12 +19,36 @@
     <nav class="teal lighten-2" role="navigation">
       <div class="nav-wrapper"> <a href="/home" class="brand-logo center">MatechS</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#modal1">Log In</a></li>
-          <li><a href="/players/new">Create an Account</a></li>
+          <% if session[:current_user_id].nil? %>
+            <li><a href="#modal1">Log In</a></li>
+          <% else %>
+          <li>
+            <form action="/session/destroy" method="post">
+              <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+              <input type="hidden" name="_method" value="destroy" />
+              <input class="btn" type="submit" value="Logout" />
+            </form>
+          </li>
+          <% end %>
+          <% if session[:current_user_id].nil? %>
+            <li><a href="/players/new">Create an Account</a></li>
+          <% end %>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="#modal1">Log In</a></li>
-          <li><a href="/players/new">Create an Account</a></li>
+          <% if session[:current_user_id].nil? %>
+            <li><a href="#modal1">Log In</a></li>
+          <% else %>
+            <li>
+              <form action="/session/destroy" method="post">
+                <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                <input type="hidden" name="_method" value="destroy" />
+                <input class="btn" type="submit" value="Logout" />
+              </form>
+            </li>
+          <% end %>
+          <% if session[:current_user_id].nil? %>
+            <li><a href="/players/new">Create an Account</a></li>
+          <% end %>
         </ul>
       </div>
     </nav>
