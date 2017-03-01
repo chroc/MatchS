@@ -38,7 +38,8 @@ $( document ).ready(function() {
     });
 
     var i = 3;
-    $(".btn-floating").on("click", function(){
+    $(".btn-floating").on("click", function(e){
+      e.preventDefault();
       $(".player-inputs").append(
       "<div class='input-field col s12 m6 l6'>"+
       "<input id='player_"+i+"' type='text' name='player_"+i+"'>"+
